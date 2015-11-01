@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataDrivenFramework", "TestOracle\DataDrivenFramework.csproj", "{06BB4AB0-C33F-424A-B58F-16AF7E7A9A89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomatedTests", "AutomatedTests\AutomatedTests.csproj", "{95D74AA9-5EDE-4F73-B13A-C170003C9D65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06BB4AB0-C33F-424A-B58F-16AF7E7A9A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06BB4AB0-C33F-424A-B58F-16AF7E7A9A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06BB4AB0-C33F-424A-B58F-16AF7E7A9A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06BB4AB0-C33F-424A-B58F-16AF7E7A9A89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95D74AA9-5EDE-4F73-B13A-C170003C9D65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D74AA9-5EDE-4F73-B13A-C170003C9D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D74AA9-5EDE-4F73-B13A-C170003C9D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D74AA9-5EDE-4F73-B13A-C170003C9D65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
