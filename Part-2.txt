@@ -1,0 +1,11 @@
+Add an ExcelHelper
+Create a Utility File 
+	- bool isSuiteRunnable(String suiteName)
+
+Create Namespaces in AutomatedTests Project
+	- in.beingzero.framework.datadriven.suiteA
+	- in.beingzero.framework.datadriven.suiteB
+	- in.beingzero.framework.datadriven.suiteC
+
+
+	

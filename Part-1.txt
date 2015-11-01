@@ -1,0 +1,28 @@
+Data Driven Framework
+-- GOOGLE:  Searching Google with Different Queries
+-- AMAZON:  Ordering Many Items from Amazon
+-- BANKING: Transferring different amounts of money from one bank to another
+-- BLOGGING: Creating Blogs on different dates with different data
+
+Starting
+-- Web Application
+-- Manual Test Cases
+
+End Goal
+-- Logging [[LOG4NET]]
+-- Automating Test Cases [[SELENIUM, C#]]
+-- Building DD Framework   [[OOP CONCEPTS, DATA HANDLING]]
+-- Collaborative Development [[GITHUB]]
+-- Distributed Execution  [[GRID]]
+-- Continuous Integration [[JENKINS]]
+-- Automated Reporting   [[JENKINS]]
+
+
+EXCEL SHEET
+-- One Excel Workbook Per Suite
+-- One Sheet Per TestSelection
+-- One Sheet Per TestData for all tests of a Suite
+-- One Excel Workbook for All Suites
+
+
+-- Core Framework
