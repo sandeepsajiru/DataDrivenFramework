@@ -19,6 +19,9 @@ namespace AutomatedTests
             selected = SelectionHelper.IsTestSelected("Test3", "Data\\SuiteA.xlsx");
             selected = SelectionHelper.IsTestSelected("Test4", "Data\\SuiteA.xlsx");
             selected = SelectionHelper.IsTestSelected("Test5", "Data\\SuiteA.xlsx");
+
+
+            SelectionHelper.ReadTestData("Test2", "Data\\SuiteA.xlsx");
         }
     }
 }

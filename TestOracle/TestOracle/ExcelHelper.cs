@@ -88,7 +88,8 @@ namespace Beingzero.Framework.Datadriven.ExcelHelper
 
         public int GetRowCount(string sheetName)
         {
-            return worksheet.RangeUsed().RowCount();
+            worksheet = workbook.Worksheet(sheetName);
+            return worksheet.LastRowUsed().RowNumber();
         }
 
         public void RemoveColumn(string sheetName, int colNum)
@@ -125,13 +126,19 @@ namespace Beingzero.Framework.Datadriven.ExcelHelper
 
         public int GetRowNumber(String sheetName, String colName, String value)
         {
+            int colNumber = GetColumnNumber(sheetName, colName);
+            return GetRowNumber(sheetName, colNumber, value);
+        }
+
+        public int GetRowNumber(String sheetName, int colNumber, String value)
+        {
             int totalRows = GetRowCount(sheetName);
             for (int i = 1; i <= totalRows; i++)
             {
-                if (GetCellData(sheetName, colName, i).Equals(value))
+                if (GetCellData(sheetName, colNumber, i).Equals(value))
                     return i;
             }
-            throw new Exception(String.Format("Value being Searched '{0}' in Sheet '{1}' under Column '{2}' Couldn't be found", value, sheetName, colName));
+            throw new Exception(String.Format("Value being Searched '{0}' in Sheet '{1}' under Column '{2}' Couldn't be found", value, sheetName, colNumber));
         }
     }
 }
