@@ -54,10 +54,24 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data\Suite.xlsx" />
-    <None Include="Data\SuiteA.xlsx" />
-    <None Include="Data\SuiteB.xlsx" />
-    <None Include="Data\SuiteC.xlsx" />
+    <None Include="Data\Suite.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\SuiteA.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\SuiteB.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\SuiteC.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestOracle\DataDrivenFramework.csproj">
+      <Project>{06bb4ab0-c33f-424a-b58f-16af7e7a9a89}</Project>
+      <Name>DataDrivenFramework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
