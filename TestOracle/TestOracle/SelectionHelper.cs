@@ -31,7 +31,7 @@ namespace TestOracle
         }
 
 
-        public static string[][] GetTestData(String testName, String suiteFilePath)
+        public static Object[][] GetTestData(String testName, String suiteFilePath)
         {
             string[][] resultData;
             DataTable dt = new DataTable();
@@ -55,6 +55,7 @@ namespace TestOracle
             }
 
             resultData = new string[i][];
+            Object[][] newResultData = new Object[i][];
 
             int r=0, c=0;
             int dataEndColNumber = j-1;
@@ -62,11 +63,18 @@ namespace TestOracle
             {
                 c = 0;
                 resultData[r] = new string[j - 1];
-                for(j=1;j<= dataEndColNumber; j++, c++)
+                newResultData[r] = new Object[1];
+                Dictionary<String, String> dict = new Dictionary<string, string>();
+                for (j = 1; j <= dataEndColNumber; j++, c++)
+                {
                     resultData[r][c] = eh.GetCellData("Data", j, i);
+                    dict.Add(eh.GetCellData("Data", j, colHeaderRowNumber), eh.GetCellData("Data", j, i));
+                    newResultData[r][0] = dict;
+                }
             }
 
-            return resultData;
+            //return resultData;
+            return newResultData;
         }
     }
 }

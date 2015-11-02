@@ -28,14 +28,14 @@ namespace NUnitAutomatedTests
 
         private String test2Name = "Test2";
         [Test, TestCaseSource("SecondData")]
-        public void DataDrivenNUnitTest2(String a, String b, String c, String d, String e, String f)
+        public void DataDrivenNUnitTest2(Dictionary<String, String> table)
         {
-            Console.WriteLine(a);   
+            Console.WriteLine("");   
         }
 
-        IEnumerable<string[]>  SecondData()
+        IEnumerable<Object[]>  SecondData()
         {
-            string[][] data = SelectionHelper.GetTestData(test2Name, "Data\\SuiteA.xlsx");
+            Object[][] data = SelectionHelper.GetTestData(test2Name, "Data\\SuiteA.xlsx");
             for (int i = 0; i < data.Length; i++)
             {
                     yield return data[i];
@@ -46,14 +46,14 @@ namespace NUnitAutomatedTests
 
         private String test1Name = "Test1";
         [Test, TestCaseSource("FirstData")]
-        public void DataDrivenNUnitTest1(String a, String b, String c, String d, String e)
+        public void DataDrivenNUnitTest1(Dictionary<String, String> table)
         {
-            Console.WriteLine(a);
+            Console.WriteLine("");
         }
 
-        IEnumerable<string[]> FirstData()
+        IEnumerable<Object[]> FirstData()
         {
-            string[][] data = SelectionHelper.GetTestData(test1Name, "Data\\SuiteA.xlsx");
+            Object[][] data = SelectionHelper.GetTestData(test1Name, "Data\\SuiteA.xlsx");
             for (int i = 0; i < data.Length; i++)
             {
                 yield return data[i];
