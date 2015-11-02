@@ -1,9 +1,11 @@
 ﻿using Beingzero.Framework.Datadriven.ExcelHelper;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataTable = DocumentFormat.OpenXml.Drawing.Charts.DataTable;
 
 namespace TestOracle
 {
@@ -29,8 +31,10 @@ namespace TestOracle
         }
 
 
-        public static void ReadTestData(String testName, String suiteFilePath)
+        public static string[][] GetTestData(String testName, String suiteFilePath)
         {
+            string[][] resultData;
+            DataTable dt = new DataTable();
             ExcelHelper eh = new ExcelHelper(suiteFilePath);
             int rowId = eh.GetRowNumber("Data", 1, testName);
             int colHeaderRowNumber = rowId + 1;
@@ -50,13 +54,19 @@ namespace TestOracle
                 j++;
             }
 
+            resultData = new string[i][];
+
+            int r=0, c=0;
             int dataEndColNumber = j-1;
-            String dataValue;
-            for(i=dataStartRowNumber;i<=dataEndRowNumber;i++)
+            for(i=dataStartRowNumber;i<=dataEndRowNumber;i++, r++)
             {
-                for(j=1;j<= dataEndColNumber; j++)
-                    dataValue = eh.GetCellData("Data", j, i);
+                c = 0;
+                resultData[r] = new string[j - 1];
+                for(j=1;j<= dataEndColNumber; j++, c++)
+                    resultData[r][c] = eh.GetCellData("Data", j, i);
             }
+
+            return resultData;
         }
     }
 }
