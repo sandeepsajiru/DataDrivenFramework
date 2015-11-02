@@ -6,7 +6,7 @@ using TestOracle;
 namespace NUnitAutomatedTests
 {
     [TestFixture]
-    public class NUnitTest1
+    public class NUnitTest1 : NUnitTestBase
     {
         [Test]
         public void TestMethod1()
@@ -30,7 +30,8 @@ namespace NUnitAutomatedTests
         [Test, TestCaseSource("SecondData")]
         public void DataDrivenNUnitTest2(Dictionary<String, String> table)
         {
-            Console.WriteLine("");   
+            ValidateRunModes("SuiteA", "Test2", table["Runmode"]);
+            Console.WriteLine(table["Runmode"]);
         }
 
         IEnumerable<Object[]>  SecondData()
@@ -48,7 +49,8 @@ namespace NUnitAutomatedTests
         [Test, TestCaseSource("FirstData")]
         public void DataDrivenNUnitTest1(Dictionary<String, String> table)
         {
-            Console.WriteLine("");
+            ValidateRunModes("SuiteA", "Test1", table["Runmode"]);
+            Console.WriteLine(table["Runmode"]);
         }
 
         IEnumerable<Object[]> FirstData()
