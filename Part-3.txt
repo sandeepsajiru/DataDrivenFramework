@@ -1,0 +1,10 @@
+Download NUnit.msi
+http://www.nunit.org/index.php?p=download
+http://www.nunit.org/index.php?p=consoleCommandLine&r=2.2.5
+
+"C:\Program Files (x86)\NUnit 2.6.4\bin\nunit-console.exe" NUnitAutomatedTests.dll 
+"C:\Program Files (x86)\NUnit 2.6.4\bin\nunit-console.exe" NUnitAutomatedTests.csproj 
+
+Install Visual Studio Extension -- NUnit Test Adapter
+Tools -> Extensions and Updates
+
