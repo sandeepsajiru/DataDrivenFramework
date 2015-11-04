@@ -11,8 +11,8 @@ namespace NUnitAutomatedTests
     {
         public void ValidateRunModes(String suiteName, String testName, String dataRunMode)
         {
-            bool isSuiteSelected = SelectionHelper.IsSuiteSelected(suiteName, "Data\\Suite.xlsx");
-            bool isTestSelected = SelectionHelper.IsTestSelected(testName, "Data\\SuiteA.xlsx");
+            bool isSuiteSelected = SelectionHelper.IsSuiteSelected(suiteName, Resources.SuitesFile);
+            bool isTestSelected = SelectionHelper.IsTestSelected(testName, );
             bool isRunModeYes = dataRunMode.Equals("Y", StringComparison.OrdinalIgnoreCase);
             if (!(isSuiteSelected && isTestSelected && isRunModeYes))
             {
